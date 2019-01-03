@@ -40,6 +40,7 @@ DJANGO_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
+    'django_extensions',
     'rest_framework',
     'rest_framework.authtoken'
 ]
@@ -131,6 +132,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = os.path.realpath(
+    os.path.join(BASE_DIR, '..', '..', 'media', 'assets')
+)
+
+STATICFILES_DIRS = (
+    os.path.realpath(os.path.join(BASE_DIR, '..', 'assets')),
+)
 
 # Django rest framework configuration
 REST_FRAMEWORK = {

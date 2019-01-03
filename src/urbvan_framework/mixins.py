@@ -36,7 +36,7 @@ class CreateModelMixin(mixins.CreateModelMixin):
         return Response(response, status=status.HTTP_201_CREATED)
 
 
-class ListModelMixin(object):
+class ListModelMixin(mixins.ListModelMixin):
 
     def list(self, request, *args, **kwargs):
 
